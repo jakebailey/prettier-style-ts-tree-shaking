@@ -131,5 +131,5 @@ dist
 
 *.js
 !baseline.js
-!typescript.js
-!prettier-modified-typescript.js
+!modified.js
+!prettier.js
