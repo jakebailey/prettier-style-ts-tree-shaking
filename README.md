@@ -9,6 +9,11 @@ terser over the output to make use of their dead code removal.
 
 This gives an output which is smaller that the output currently used by prettier.
 
+Disclaimer: I have not thoroughly tested this; I may have over-removed things,
+but my goal was to show an potential way forward here if this approach
+continues to be used. Potentially, a future TS release may include ESM which
+hopefully would make this moot.
+
 Minified with esbuild for comparison:
 
 ```
