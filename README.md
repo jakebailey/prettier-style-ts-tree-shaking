@@ -1,7 +1,9 @@
 # Prettier-style typescript.js internal tree shaking
 
 This is a PoC to show how one might remove unused code from within
-`typescript.js` now that the file is bundled and not namespaces. In general,
+`typescript.js` in a way similar to the hack done in
+[prettier](https://github.com/prettier/prettier/blob/main/scripts/build/modify-typescript-module.mjs)
+now that the file is bundled and not namespaces. In general,
 the approach is to remove pieces of code from the bundle, then run rollup or
 terser over the output to make use of their dead code removal.
 
