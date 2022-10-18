@@ -5,10 +5,10 @@ all: baseline modified prettier
 
 define add_bundle =
 $(1).rollup.js: $(1).js
-	npx rollup $$< --file $$@ --format=cjs > /dev/null
+	npx rollup $$< --file $$@ --format=cjs --silent > /dev/null
 
 $(1).rollup.min.js: $(1).rollup.js
-	npx esbuild $$< --outfile=$$@ --minify > /dev/null
+	npx esbuild $$< --outfile=$$@ --minify --log-level=error > /dev/null
 
 $(1).terser.js: $(1).js
 	npx terser $$< -o $$@ --format=beautify --compress > /dev/null
