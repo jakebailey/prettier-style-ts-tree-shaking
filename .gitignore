@@ -130,3 +130,4 @@ dist
 .pnp.*
 
 *.min.js
+*.rollup.js

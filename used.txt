@@ -1,0 +1,70 @@
+in packages/typescript-estree:
+    rg -g '*.js' '\bts\.(\w+)' -r '$1' -o --no-filename dist ../../node_modules/tsutils | sort | uniq
+
+not completely accurate due to jsdoc comments, but can delete anything that doesn't appear here safely
+Below I commented out things that are actually type only
+
+DiagnosticCategory
+Extension
+FileWatcherEventKind
+IndexKind
+JsxEmit
+LanguageVariant
+ModifierFlags
+ModuleKind
+// Node
+// NodeArray
+NodeFlags
+// Nodes
+ObjectFlags
+// Program
+ScriptKind
+ScriptTarget
+// SourceFile
+SymbolFlags
+SyntaxKind
+// Token
+TypeFlags
+canHaveDecorators
+canHaveModifiers
+createAbstractBuilder
+createCompilerHost
+createProgram
+createScanner
+createSourceFile
+createWatchCompilerHost
+createWatchProgram
+escapeLeadingUnderscores
+flattenDiagnosticMessageText
+forEachChild
+forEachLeadingCommentRange
+forEachTrailingCommentRange
+formatDiagnostics
+getCombinedModifierFlags
+getDecorators
+getJSDocReturnType
+getJSDocThisTag
+getJSDocType
+getLineAndCharacterOfPosition
+getModifiers
+getParsedCommandLineOfConfigFile
+getShebang
+isDecorator
+isExpressionStatement
+isExternalModule
+isIdentifier
+isIdentifierPart
+isIdentifierStart
+isJSDocPropertyLikeTag
+isJSDocSignature
+isLineBreak
+isOptionalChain
+isPropertyAccessExpression
+isQualifiedName
+isStringLiteral
+isToken
+isTypeNode
+sys
+tokenToString
+version
+versionMajorMinor
