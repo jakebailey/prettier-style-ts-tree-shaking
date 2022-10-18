@@ -1,4 +1,4 @@
-.PHONY: all baseline modified prettier
+.PHONY: all baseline modified prettier clean
 
 all: baseline modified prettier
 	ls -lAhS *.js 
@@ -30,3 +30,5 @@ prettier.min.js: prettier.js
 
 prettier: prettier.min.js
 
+clean:
+	git clean -fdx -e '/node_modules'
