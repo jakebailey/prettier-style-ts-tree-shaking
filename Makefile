@@ -14,7 +14,7 @@ $(1).terser.js: $(1).js
 	npx terser $$< -o $$@ --format=beautify --compress > /dev/null
 
 $(1).terser.min.js: $(1).terser.js
-	npx esbuild $$< --outfile=$$@ --minify > /dev/null
+	npx esbuild $$< --outfile=$$@ --minify --log-level=error > /dev/null
 
 $(1): $(1).rollup.min.js $(1).terser.min.js
 
@@ -26,7 +26,7 @@ $(eval $(call add_bundle,baseline))
 $(eval $(call add_bundle,modified))
 
 prettier.min.js: prettier.js
-	npx esbuild $< --outfile=$@ --minify > /dev/null
+	npx esbuild $< --outfile=$@ --minify --log-level=error > /dev/null
 
 prettier: prettier.min.js
 
