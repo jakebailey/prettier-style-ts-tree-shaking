@@ -129,5 +129,7 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-*.min.js
-*.rollup.js
+*.js
+!baseline.js
+!typescript.js
+!prettier-modified-typescript.js

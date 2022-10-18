@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "esbuild": "^0.15.11",
     "rollup": "^3.2.3",
     "terser": "^5.15.1"
   }
