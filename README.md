@@ -32,8 +32,8 @@ One can diff `baseline.js` and `modified.js` to see the difference.
 `rollup` seems to be the faster of the two; esbuild doesn't do this kind of optimization.
 
 ```
-npx terser modified.js -o modified.terser.js --format=beautify --compress > /dev/null
-make modified.terser.js  10.86s user 0.38s system 154% cpu 7.294 total
+npx terser modified.js -o modified.terser.js --compress > /dev/null
+make modified.terser.js  10.97s user 0.34s system 154% cpu 7.313 total
 
 npx rollup modified.js --file modified.rollup.js --format=cjs --silent > /dev/null
 make modified.rollup.js  3.98s user 0.24s system 154% cpu 2.741 total
