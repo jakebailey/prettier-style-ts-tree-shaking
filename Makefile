@@ -1,7 +1,7 @@
 .PHONY: all baseline modified prettier
 
 all: baseline modified prettier
-	ls -lAh *.min.js
+	ls -lAhS *.js 
 
 define add_bundle =
 $(1).rollup.js: $(1).js
