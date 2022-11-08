@@ -7,7 +7,7 @@ now that the file is bundled and not namespaces. In general,
 the approach is to remove pieces of code from the bundle, then run rollup or
 terser over the output to make use of their dead code removal.
 
-This gives an output which is smaller that the output currently used by prettier.
+This gives an output which is smaller than the output currently used by prettier.
 
 Disclaimer: I have not thoroughly tested this; I may have over-removed things,
 but my goal was to show an potential way forward here if this approach
